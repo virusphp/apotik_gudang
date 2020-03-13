@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D0B90B4-433E-44DF-B8F8-6653185794E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CrudAwal</RootNamespace>
+    <AssemblyName>CrudAwal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CrudAwal.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Plugin\Bunifu .NET UI Framework 1.5.3\Crack\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Net4.1.0.0\lib\net40\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=16.1460.0.37, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SI_Gudang_Farmasi\SI_Gudang_Farmasi\bin\Debug\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=16.1460.0.37, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.XlsIO.Base, Version=16.1460.0.37, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SI_Gudang_Farmasi\SI_Gudang_Farmasi\bin\Debug\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\ModelBarangFarmasi\BarangFarmasiData.cs" />
+    <Compile Include="Model\ModelGolonganObat\GolonganObat.cs" />
+    <Compile Include="Model\ModelGolonganObat\GolonganObatData.cs" />
+    <Compile Include="Model\ModelJenisObat\JenisObat.cs" />
+    <Compile Include="Model\ModelJenisObat\JenisObatData.cs" />
+    <Compile Include="Model\ModelKelompokObat\KelompokObat.cs" />
+    <Compile Include="Model\ModelKelompokObat\KelompokObatData.cs" />
+    <Compile Include="Model\ModelPabrik\Pabrik.cs" />
+    <Compile Include="Model\ModelPabrik\PabrikData.cs" />
+    <Compile Include="Model\ModelPesanan\Pesanan.cs" />
+    <Compile Include="Model\ModelPesanan\PesananData.cs" />
+    <Compile Include="Model\ModelRakbarang\RakBarang.cs" />
+    <Compile Include="Model\ModelRakbarang\RakBarangData.cs" />
+    <Compile Include="Model\ModelSatuan\Satuan.cs" />
+    <Compile Include="Model\ModelSatuan\SatuanData.cs" />
+    <Compile Include="Model\ModelSuplier\Suplier.cs" />
+    <Compile Include="Model\ModelSuplier\SuplierData.cs" />
+    <Compile Include="Model\ModelUnitBagian\UnitBagian.cs" />
+    <Compile Include="Model\ModelUnitBagian\UnitBagianData.cs" />
+    <Compile Include="ViewForm\FormBarang\formBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormBarang\formBarang.Designer.cs">
+      <DependentUpon>formBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormGlobal\formListBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormGlobal\formListBarang.Designer.cs">
+      <DependentUpon>formListBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormGlobal\formListGlobal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormGlobal\formListGlobal.Designer.cs">
+      <DependentUpon>formListGlobal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormGudang\formGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormGudang\formGudang.Designer.cs">
+      <DependentUpon>formGudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="koneksi\Configuration.cs" />
+    <Compile Include="Model\ModelBarangFarmasi\BarangFarmasi.cs" />
+    <Compile Include="Model\ModelFarmasi\FarmasiData.cs" />
+    <Compile Include="Model\ModelLogin\Login.cs" />
+    <Compile Include="Model\ModelLogin\LoginData.cs" />
+    <Compile Include="Modul\CircleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modul\CirclePicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormLogin\formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormLogin\formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormPabrik\formPabrik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormPabrik\formPabrik.Designer.cs">
+      <DependentUpon>formPabrik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormPegawai\formPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormPegawai\formPegawai.Designer.cs">
+      <DependentUpon>formPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="koneksi\DBConnect.cs" />
+    <Compile Include="Model\ModelFarmasi\passFarmasi.cs" />
+    <Compile Include="Model\ModelPegawai\Pegawai.cs" />
+    <Compile Include="Model\ModelPegawai\PegawaiData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewForm\FormPesanan\formEntryPesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormPesanan\formEntryPesanan.Designer.cs">
+      <DependentUpon>formEntryPesanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormPesanan\formPesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormPesanan\formPesanan.Designer.cs">
+      <DependentUpon>formPesanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormSatuan\formSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormSatuan\formSatuan.Designer.cs">
+      <DependentUpon>formSatuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormSuplier\formSuplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormSuplier\formSuplier.Designer.cs">
+      <DependentUpon>formSuplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormUnit\formUnitBagian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormUnit\formUnitBagian.Designer.cs">
+      <DependentUpon>formUnitBagian.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewForm\FormBarang\formBarang.resx">
+      <DependentUpon>formBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormGlobal\formListBarang.resx">
+      <DependentUpon>formListBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormGlobal\formListGlobal.resx">
+      <DependentUpon>formListGlobal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormGudang\formGudang.resx">
+      <DependentUpon>formGudang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormLogin\formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormPabrik\formPabrik.resx">
+      <DependentUpon>formPabrik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormPegawai\formPegawai.resx">
+      <DependentUpon>formPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormPesanan\formEntryPesanan.resx">
+      <DependentUpon>formEntryPesanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormPesanan\formPesanan.resx">
+      <DependentUpon>formPesanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormSatuan\formSatuan.resx">
+      <DependentUpon>formSatuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormSuplier\formSuplier.resx">
+      <DependentUpon>formSuplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormUnit\formUnitBagian.resx">
+      <DependentUpon>formUnitBagian.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-gears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mutation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stoking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gudang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock_fifo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closed-stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rekap-stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-correct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-ed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-kraton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faktur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faktur-terima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-faktur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return-depo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return-ruang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max-min-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f060d45d3047e8e307fcf41d97186fdf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-ed1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
